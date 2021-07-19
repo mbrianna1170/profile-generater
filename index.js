@@ -5,16 +5,13 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
-// begin generator
-init ();
+const teamInfo = [];
 
-function init () {
-    console.log('Welcome to the Profile Generator for Teams! Please Begin.');
-}
-
-// array for user information
-function getInfo () {
-    inquirer.prompt([
+// Start Team Profile Generator
+const teamQuestions = () => {
+    console.log('Welcome to the Team Profile Generator! Please begin.');
+    return inquirer
+    .prompt([
         {
             type: 'input',
             message: 'Please enter employee name:',
@@ -35,10 +32,9 @@ function getInfo () {
             name: 'roles',
             message: 'Please select correct role:',
             choices: ['Intern', 'Engineer', 'Manager']
-
         }
-    ])
+    ]);
 };
 
-new getInfo();
-
+teamQuestions()
+.then(answers => console.log(answers));
