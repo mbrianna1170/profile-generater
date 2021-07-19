@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const Employee = require('../profile-generator/lib/Employee');
+const Employee = require('../team-profile-generator/lib/Employee')
 
 // begin generator
 init ();

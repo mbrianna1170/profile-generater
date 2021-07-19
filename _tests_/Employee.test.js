@@ -1,10 +1,8 @@
-const Employee = require('../lib/Employee.js');
+const Employee = require('../lib/Employee')
 
-test('creates a random employee object', () => {
-    const employee = Employee;
-
-    expect(employee.name).toEqual(expect.any(String));
-    expect(employee.email).toEqual(expect.any(String));
-    
-
+test('creates an employee object', () => {
+    const employee = new Employee('name', 'email', 1);
+    expect(employee.name).toBe('name');
+    expect(employee.email).toBe('email');
+    expect(employee.id).toEqual(expect.any(Number));
 });
