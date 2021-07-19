@@ -28,13 +28,51 @@ const teamQuestions = () => {
             name: 'id'
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'roles',
             message: 'Please select correct role:',
             choices: ['Intern', 'Engineer', 'Manager']
-        }
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "Enter the school the intern goes to:",
+            when: (responces) => responces.roles === 'Intern',
+        },
+        {
+            type: "input",
+            name: "github",
+            message: "Enter the Github username for the Engineer:",
+            when: (responces) => responces.roles === 'Engineer',
+        },
+        {
+            type: "input",
+            name: "officeNumber",
+            message: "Enter the phone number for the manager:",
+            when: (responces) => responces.roles === 'Manager',
+        },
+       
     ]);
 };
 
+const addEmployee = () => {
+    return inquirer
+      .prompt([
+        {
+          type: "confirm",
+          name: "confirmAddEmployee",
+          message: "Would you like to add another employee?",
+          default: false,
+        },
+      ])
+      .then((addEmployee) => {
+        if (addEmployee.confirmAddEmployee === true) {
+          teamQuestions();
+        } else {
+          console.log(answers);
+        }
+      });
+  };
+
 teamQuestions()
-.then(answers => console.log(answers));
+.then(addEmployee)
