@@ -7,3 +7,9 @@ test('creates an engineer object', () => {
     expect(engineer.id).toEqual(expect.any(Number));
     expect(engineer.github).toBe('github');
 });
+
+test('getRole() should return "Employee"', () => {
+    const testEngineer = 'Engineer';
+    const engineer = new Engineer('Bri', 'bri@test.com', 1);
+    expect(engineer.getRole()).toBe(testEngineer);
+  });
