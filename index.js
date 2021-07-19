@@ -2,9 +2,15 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const Employee = require('../profile-generator/lib/Employee');
 
-// array for user information
+// begin generator
+init ();
 
-function teamMemberInfo() {
+function init () {
+    console.log('Welcome to the Profile Generator for Teams! Please Begin.');
+}
+
+// array for user information
+function Team () {
     inquirer.prompt([
         {
             type: 'input',
@@ -29,17 +35,10 @@ function teamMemberInfo() {
 
         }
     ])
-    .then(answers => {
-        if (answers.role === 'Manager') {
-            inquirer.prompt([
-                {
-                    type: 'input',
-                    message: 'Please enter the office phone number:',
-                    name: 'officeNumber'
-                }
-            ])
-        }
-    })
 };
 
-new teamMemberInfo();
+new Team();
+
+const employee = Employee(Team) {
+    console.log(employee);
+}
