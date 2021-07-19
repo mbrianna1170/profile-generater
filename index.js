@@ -39,6 +39,3 @@ function Team () {
 
 new Team();
 
-const employee = Employee(Team) {
-    console.log(employee);
-}
