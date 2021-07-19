@@ -7,3 +7,9 @@ test('creates an intern object', () => {
     expect(intern.id).toEqual(expect.any(Number));
     expect(intern.school).toBe('school');
 });
+
+test('getRole() should return "Intern"', () => {
+    const testIntern = 'Intern';
+    const intern = new Intern('Bri', 'bri@test.com', 3, 'MIT');
+    expect(intern.getRole()).toBe(testIntern);
+  });
