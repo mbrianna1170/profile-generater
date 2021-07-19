@@ -1,1 +1,1 @@
-# profile-generater
+# Profile Generator
