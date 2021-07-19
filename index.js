@@ -1,6 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const Employee = require('../team-profile-generator/lib/Employee')
+const Employee = require('./lib/Employee');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const Manager = require('./lib/Manager');
 
 // begin generator
 init ();
@@ -10,7 +13,7 @@ function init () {
 }
 
 // array for user information
-function Team () {
+function getInfo () {
     inquirer.prompt([
         {
             type: 'input',
@@ -37,5 +40,5 @@ function Team () {
     ])
 };
 
-new Team();
+new getInfo();
 

@@ -6,3 +6,10 @@ test('creates an employee object', () => {
     expect(employee.email).toBe('email');
     expect(employee.id).toEqual(expect.any(Number));
 });
+
+
+test('getRole() should return "Employee"', () => {
+    const testEmployee = 'Employee';
+    const employee = new Employee('Bri', 'bri@test.com', 1);
+    expect(employee.getRole()).toBe(testEmployee);
+  });
