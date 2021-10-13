@@ -4,6 +4,12 @@
 ## Objective
 
   Using Node.js and the inquirer package to generate an HTML web-page that display employees contact information.
+  
+  ## User Story
+  
+- AS A manager
+- I WANT to generate a webpage that displays my team's basic info
+- SO THAT I have quick access to their emails and GitHub profiles
 
 ## 💾Installation/Usage
 
