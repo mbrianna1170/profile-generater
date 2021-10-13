@@ -1,0 +1,32 @@
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+}
+
+.header {
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(233, 98, 98);
+  color: white;
+  font-size: 25px;
+}
+
+.col-3 {
+  padding-top: 2%;
+  width: 50%
+}
+
+ul {
+  text-decoration: none;
+  text-decoration-color: none;
+  text-align: center;
+  list-style: none;
+}
+
+.card-header {
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(236, 160, 160);
+}
