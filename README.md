@@ -23,4 +23,5 @@
 
 # Video Walkthrough: 
 Testing: https://drive.google.com/file/d/18ev4Kqw_6H3HtkwLz79b9f07oVDmC2I8/view
+Command Line Prompts: https://watch.screencastify.com/v/sAnPPxRoKus50g8iE8oG
 
