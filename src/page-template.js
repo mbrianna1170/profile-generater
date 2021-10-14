@@ -1,12 +1,12 @@
 const Employee = require("../lib/Employee");
 const Manager = require("../lib/Manager");
 
-const generatePage = function (Manager) {
+const generatePage = function (manager) {
   // manager
   return `
         <div class="col-3">
         <div class="card">
-        <div class="card-header">${Manager.role}</div>
+        <div class="card-header">${Manager.name}</div>
         <ul>
         <li>Name: ${Manager.name}</li>
         <li>ID: ${Manager.id}</li>

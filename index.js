@@ -75,7 +75,7 @@ const promptUser = () => {
                     default: false
                 }])
                 .then(({github, confirmAddEmployee}) => {
-                    engineer.push(new Engineer(employee, email, id, github))
+                    engineer.push(new Engineer(name, email, id, github))
                     if (confirmAddEmployee) {
                         return promptUser();
                     }
@@ -94,7 +94,7 @@ const promptUser = () => {
                     default: false
                 }])
                 .then(({school, confirmAddEmployee}) => {
-                    intern.push(new Intern(this.name, email, id, school))
+                    intern.push(new Intern(name, email, id, school))
                     if (confirmAddEmployee) {
                         return promptUser();
                     }
@@ -106,7 +106,7 @@ const promptUser = () => {
 
 
 promptUser()
-.then(newData => {
+.then(employeeArray => {
     return generatePage(employeeArray)
 })
 .then(pageHTML => {
